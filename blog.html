@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog – Research with Grit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            },
+            colors: {
+              primary: '#2563eb',
+              dark: '#1e293b',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gradient-to-b from-slate-100 to-white text-gray-900 font-sans">
+    <main class="min-h-screen px-4 py-12 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto space-y-8">
+        <header class="flex items-center justify-between">
+          <div>
+            <p class="text-sm uppercase tracking-wide text-primary font-semibold">Research with Grit</p>
+            <h1 class="text-4xl font-extrabold text-dark">Blog</h1>
+            <p class="mt-2 text-gray-600">Thoughts on research, rigor, and practice.</p>
+          </div>
+          <a
+            href="index.html"
+            class="inline-flex items-center px-4 py-2 rounded-lg bg-gray-800 text-white font-semibold hover:bg-black transition"
+          >
+            ← Home
+          </a>
+        </header>
+
+        <section class="space-y-4">
+          <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow space-y-5">
+            <header class="space-y-1">
+              <p class="text-sm uppercase tracking-wide text-primary font-semibold">Research Note</p>
+              <h2 class="text-2xl font-semibold text-dark">Innovative Approaches to Enhancing Parameter Efficiency in Large Language Models</h2>
+              <p class="text-sm text-gray-500">Exploring how token counts shape efficiency, cost, and accessibility.</p>
+              <p class="text-xs text-gray-500">Published: January 3, 2026</p>
+            </header>
+
+            <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
+              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Efficiency</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">LLMs</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Sustainability</span>
+            </div>
+
+            <p class="text-gray-700 leading-relaxed">
+              The rapid growth of large language models has transformed AI but introduced immense compute costs and environmental impact. Linear scaling of datasets often yields diminishing returns, pricing out smaller teams and independent researchers.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+              This quantitative study tested whether training token count influences parameter efficiency while holding model size constant. Using scaling laws as a guide, the goal was to find token-to-parameter ratios that lower compute demands and broaden accessibility.
+            </p>
+
+            <figure class="overflow-hidden rounded-xl shadow-sm border border-slate-100">
+              <img
+                src="https://images.unsplash.com/photo-1527443224154-d72cc2e3d8bf?auto=format&fit=crop&w=1600&q=80"
+                alt="Researcher reviewing model training charts on a laptop"
+                class="w-full h-72 object-cover"
+              />
+              <figcaption class="px-3 py-2 text-sm text-gray-500">Analyzing training runs and scaling effects on efficiency.</figcaption>
+            </figure>
+
+            <h3 class="text-xl font-semibold text-dark">Methodology</h3>
+            <p class="text-gray-700 leading-relaxed">
+              TinyLlama (1.1B parameters) was trained under three token conditions: 500,000; 1,000,000; and 2,000,000 tokens. Training ran on an AWS SageMaker notebook to mirror a constrained edge environment. Repeated measures ANOVA with Bonferroni corrections assessed differences.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">Results</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Token count showed a significant effect on parameter efficiency, F(2, 98) = 77.3166, p &lt; .001, η² = .5268. The 2,000,000-token condition differed from both 500,000 and 1,000,000, though its average efficiency was lower—suggesting a non-linear relationship.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">Implications</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Tuning token-to-parameter ratios could cut compute needs and open participation to smaller organizations. Thoughtful scaling may also reduce the carbon footprint of training by meaningful margins, making research more sustainable and inclusive.
+            </p>
+
+            <figure class="overflow-hidden rounded-xl shadow-sm border border-slate-100">
+              <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80"
+                alt="A serene landscape symbolizing sustainable technology"
+                class="w-full h-72 object-cover"
+              />
+              <figcaption class="px-3 py-2 text-sm text-gray-500">Efficiency gains can align with lower environmental impact.</figcaption>
+            </figure>
+
+            <h3 class="text-xl font-semibold text-dark">Next Steps</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Future work could probe additional token intervals and energy metrics to refine efficiency strategies. Collaboration across the community can accelerate practical recipes that balance capability, cost, and environmental impact.
+            </p>
+          </article>
+
+          <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow space-y-5">
+            <header class="space-y-1">
+              <p class="text-sm uppercase tracking-wide text-primary font-semibold">Perspective</p>
+              <h2 class="text-2xl font-semibold text-dark">Rethinking Metrics in AI: Beyond Efficiency and Statistical Significance</h2>
+              <p class="text-sm text-gray-500">Why looking past accuracy and p-values gives a truer picture of model impact.</p>
+              <p class="text-xs text-gray-500">Published: January 3, 2026</p>
+            </header>
+
+            <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
+              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Evaluation</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Metrics</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">AI Ethics</span>
+            </div>
+
+            <p class="text-gray-700 leading-relaxed">
+              In a fast-paced AI landscape, the yardsticks we use shape what we build. Statistical significance has long been a go-to for judging results, but it can miss practical impact. Accuracy alone can also obscure how models behave in real-world settings.
+            </p>
+
+            <figure class="overflow-hidden rounded-xl shadow-sm border border-slate-100">
+              <img
+                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80"
+                alt="Data scientist reviewing model performance charts"
+                class="w-full h-72 object-cover"
+              />
+              <figcaption class="px-3 py-2 text-sm text-gray-500">Beyond single metrics: reading the full performance story.</figcaption>
+            </figure>
+
+            <h3 class="text-xl font-semibold text-dark">The Limitations of Traditional Metrics</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Statistical significance helps confirm that effects are real, yet it says little about usefulness. A 5% lift might mean one extra correct prediction out of 1,000—hardly transformative. Accuracy, precision, and recall also give snapshots that can miss demographic nuances or shifting data.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">Efficiency and Perplexity: A Partial Picture</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Throughput, latency, and perplexity are valuable, but narrow. A chatbot can be fast and low-perplexity while still misunderstanding intent—user satisfaction may lag far behind headline scores.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">Introducing New Metrics</h3>
+            <div class="space-y-3 text-gray-700 leading-relaxed">
+              <p><span class="font-semibold text-dark">Efficiency per Watt:</span> Evaluate TFLOPS per parameter per watt to reflect both compute speed and energy cost. When two models tie on quality, the lower-energy option is the sustainable pick.</p>
+              <p><span class="font-semibold text-dark">Task-Specific Scores:</span> Use context-aware metrics like BLEU or ROUGE to capture quality within the task, not just aggregate correctness.</p>
+            </div>
+
+            <figure class="overflow-hidden rounded-xl shadow-sm border border-slate-100">
+              <img
+                src="https://images.unsplash.com/photo-1581092915814-1e7e43e84dfd?auto=format&fit=crop&w=1600&q=80"
+                alt="Visualization dashboard showing AI performance metrics"
+                class="w-full h-72 object-cover"
+              />
+              <figcaption class="px-3 py-2 text-sm text-gray-500">Dashboards and visualizations make trade-offs and variance visible.</figcaption>
+            </figure>
+
+            <h3 class="text-xl font-semibold text-dark">Visualizations: A Powerful Tool</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Distribution plots reveal variance across datasets and models; confidence intervals show stability; effect sizes highlight practical differences beyond significance. Together, they surface trends hidden by single-number summaries.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">The Importance of Context</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Metrics must travel with the model. A score earned in a controlled lab can collapse in production. Evaluations should reflect deployment environments—data drift, demographic shifts, latency limits, and safety constraints.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">Moving Forward with Metrics</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Broadening beyond accuracy and p-values helps align AI with real-world value. Blending energy-aware metrics, task-specific scores, and clear visualizations yields a fuller picture of impact, guiding models that are not just statistically sound but genuinely useful.
+            </p>
+          </article>
+
+          <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow space-y-5">
+            <header class="space-y-1">
+              <p class="text-sm uppercase tracking-wide text-primary font-semibold">Findings</p>
+              <h2 class="text-2xl font-semibold text-dark">Understanding the Impact of Training Token Count on Parameter Efficiency in Experiments</h2>
+              <p class="text-sm text-gray-500">How a 150-trial study maps token counts to efficiency, with careful statistical checks.</p>
+              <p class="text-xs text-gray-500">Published: January 3, 2026</p>
+            </header>
+
+            <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
+              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Token Scaling</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Efficiency</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Statistics</span>
+            </div>
+
+            <p class="text-gray-700 leading-relaxed">
+              In fast-paced ML work, understanding how training token counts influence parameter efficiency can materially shift outcomes. This post summarizes findings from 150 trials that varied token counts and applied repeated measures ANOVA to uncover practical guidance.
+            </p>
+
+            <figure class="overflow-hidden rounded-xl shadow-sm border border-slate-100">
+              <img
+                src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&q=80"
+                alt="Close-up of data analysis screens with charts"
+                class="w-full h-72 object-cover"
+              />
+              <figcaption class="px-3 py-2 text-sm text-gray-500">Visualizing token-count experiments to track efficiency shifts.</figcaption>
+            </figure>
+
+            <p class="text-gray-700 leading-relaxed">
+              The study leveraged the script analyze_results.py (Dwyer, 2025) with common Python libraries to process results. Repeated measures ANOVA highlighted whether efficiency differed across token settings—well-suited for within-subject comparisons (Kraska, 2010).
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">Key Findings</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Training token count significantly affected parameter efficiency: F(2, 98) = 77.3166, p &lt; .001, η² = .5268. Pairwise comparisons with Bonferroni correction showed 2M tokens underperformed 500K (t = 12.9365, p &lt; .001) and 1M (t = 9.0908, p &lt; .001), while 500K vs. 1M was not significant (t = 1.9377, p = .1753).
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+              This suggests a threshold where more tokens stop helping—and can even hurt—making it vital to tune token budgets rather than scale blindly.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">Sphericity and Corrections</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Mauchly’s test could not yield stable covariance estimates, prompting a conservative Greenhouse–Geisser correction (ε ≈ .964) instead of Huynh–Feldt to control Type I error risk. No extreme outliers in efficiency or perplexity were observed, bolstering confidence in the conclusions.
+            </p>
+
+            <figure class="overflow-hidden rounded-xl shadow-sm border border-slate-100">
+              <img
+                src="https://images.unsplash.com/photo-1504639725590-34d4982c382f?auto=format&fit=crop&w=1600&q=80"
+                alt="Researcher overlooking data visualizations on a large screen"
+                class="w-full h-72 object-cover"
+              />
+              <figcaption class="px-3 py-2 text-sm text-gray-500">Balancing statistical rigor with practical thresholds for token budgets.</figcaption>
+            </figure>
+
+            <h3 class="text-xl font-semibold text-dark">Final Thoughts</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Careful token-count tuning, paired with robust statistics, can improve efficiency without runaway compute. As models and datasets grow, staying alert to diminishing returns will keep training strategies both effective and sustainable.
+            </p>
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
