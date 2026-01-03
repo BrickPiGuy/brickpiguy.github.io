@@ -61,6 +61,7 @@
               This quantitative study tested whether training token count influences parameter efficiency while holding model size constant. Using scaling laws as a guide, the goal was to find token-to-parameter ratios that lower compute demands and broaden accessibility.
             </p>
 
+            <!-- 
             <figure class="overflow-hidden rounded-xl shadow-sm border border-slate-100">
               <img
                 src="https://images.unsplash.com/photo-1527443224154-d72cc2e3d8bf?auto=format&fit=crop&w=1600&q=80"
@@ -69,6 +70,7 @@
               />
               <figcaption class="px-3 py-2 text-sm text-gray-500">Analyzing training runs and scaling effects on efficiency.</figcaption>
             </figure>
+            -->
 
             <h3 class="text-xl font-semibold text-dark">Methodology</h3>
             <p class="text-gray-700 leading-relaxed">
@@ -85,6 +87,7 @@
               Tuning token-to-parameter ratios could cut compute needs and open participation to smaller organizations. Thoughtful scaling may also reduce the carbon footprint of training by meaningful margins, making research more sustainable and inclusive.
             </p>
 
+            <!-- 
             <figure class="overflow-hidden rounded-xl shadow-sm border border-slate-100">
               <img
                 src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80"
@@ -93,6 +96,7 @@
               />
               <figcaption class="px-3 py-2 text-sm text-gray-500">Efficiency gains can align with lower environmental impact.</figcaption>
             </figure>
+            -->
 
             <h3 class="text-xl font-semibold text-dark">Next Steps</h3>
             <p class="text-gray-700 leading-relaxed">
@@ -118,6 +122,7 @@
               In a fast-paced AI landscape, the yardsticks we use shape what we build. Statistical significance has long been a go-to for judging results, but it can miss practical impact. Accuracy alone can also obscure how models behave in real-world settings.
             </p>
 
+            <!-- 
             <figure class="overflow-hidden rounded-xl shadow-sm border border-slate-100">
               <img
                 src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80"
@@ -126,6 +131,7 @@
               />
               <figcaption class="px-3 py-2 text-sm text-gray-500">Beyond single metrics: reading the full performance story.</figcaption>
             </figure>
+            -->
 
             <h3 class="text-xl font-semibold text-dark">The Limitations of Traditional Metrics</h3>
             <p class="text-gray-700 leading-relaxed">
@@ -143,6 +149,12 @@
               <p><span class="font-semibold text-dark">Task-Specific Scores:</span> Use context-aware metrics like BLEU or ROUGE to capture quality within the task, not just aggregate correctness.</p>
             </div>
 
+            <h3 class="text-xl font-semibold text-dark">Visualizations: A Powerful Tool</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Distribution plots reveal variance across datasets and models; confidence intervals show stability; effect sizes highlight practical differences beyond significance. Together, they surface trends hidden by single-number summaries.
+            </p>
+
+            <!-- 
             <figure class="overflow-hidden rounded-xl shadow-sm border border-slate-100">
               <img
                 src="https://images.unsplash.com/photo-1581092915814-1e7e43e84dfd?auto=format&fit=crop&w=1600&q=80"
@@ -151,11 +163,7 @@
               />
               <figcaption class="px-3 py-2 text-sm text-gray-500">Dashboards and visualizations make trade-offs and variance visible.</figcaption>
             </figure>
-
-            <h3 class="text-xl font-semibold text-dark">Visualizations: A Powerful Tool</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Distribution plots reveal variance across datasets and models; confidence intervals show stability; effect sizes highlight practical differences beyond significance. Together, they surface trends hidden by single-number summaries.
-            </p>
+            -->
 
             <h3 class="text-xl font-semibold text-dark">The Importance of Context</h3>
             <p class="text-gray-700 leading-relaxed">
@@ -186,6 +194,7 @@
               In fast-paced ML work, understanding how training token counts influence parameter efficiency can materially shift outcomes. This post summarizes findings from 150 trials that varied token counts and applied repeated measures ANOVA to uncover practical guidance.
             </p>
 
+            <!-- 
             <figure class="overflow-hidden rounded-xl shadow-sm border border-slate-100">
               <img
                 src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&q=80"
@@ -194,6 +203,7 @@
               />
               <figcaption class="px-3 py-2 text-sm text-gray-500">Visualizing token-count experiments to track efficiency shifts.</figcaption>
             </figure>
+            -->
 
             <p class="text-gray-700 leading-relaxed">
               The study leveraged the script analyze_results.py (Dwyer, 2025) with common Python libraries to process results. Repeated measures ANOVA highlighted whether efficiency differed across token settings—well-suited for within-subject comparisons (Kraska, 2010).
@@ -208,11 +218,7 @@
               This suggests a threshold where more tokens stop helping—and can even hurt—making it vital to tune token budgets rather than scale blindly.
             </p>
 
-            <h3 class="text-xl font-semibold text-dark">Sphericity and Corrections</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Mauchly’s test could not yield stable covariance estimates, prompting a conservative Greenhouse–Geisser correction (ε ≈ .964) instead of Huynh–Feldt to control Type I error risk. No extreme outliers in efficiency or perplexity were observed, bolstering confidence in the conclusions.
-            </p>
-
+            <!-- 
             <figure class="overflow-hidden rounded-xl shadow-sm border border-slate-100">
               <img
                 src="https://images.unsplash.com/photo-1504639725590-34d4982c382f?auto=format&fit=crop&w=1600&q=80"
@@ -221,6 +227,12 @@
               />
               <figcaption class="px-3 py-2 text-sm text-gray-500">Balancing statistical rigor with practical thresholds for token budgets.</figcaption>
             </figure>
+            -->
+
+            <h3 class="text-xl font-semibold text-dark">Sphericity and Corrections</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Mauchly’s test could not yield stable covariance estimates, prompting a conservative Greenhouse–Geisser correction (ε ≈ .964) instead of Huynh–Feldt to control Type I error risk. No extreme outliers in efficiency or perplexity were observed, bolstering confidence in the conclusions.
+            </p>
 
             <h3 class="text-xl font-semibold text-dark">Final Thoughts</h3>
             <p class="text-gray-700 leading-relaxed">
