@@ -42,6 +42,29 @@
         },
       };
     </script>
+    <style>
+      details summary {
+        cursor: pointer;
+        user-select: none;
+      }
+      details summary::-webkit-details-marker {
+        color: #2563eb;
+        margin-right: 0.75rem;
+      }
+      details > summary {
+        list-style: none;
+      }
+      details > summary::before {
+        content: '▶ ';
+        color: #2563eb;
+        display: inline-block;
+        margin-right: 0.5rem;
+        transition: transform 0.2s ease;
+      }
+      details[open] > summary::before {
+        transform: rotate(90deg);
+      }
+    </style>
   </head>
   <body class="bg-gradient-to-b from-slate-100 to-white text-gray-900 font-sans">
     <main class="min-h-screen px-4 py-12 sm:px-6 lg:px-8">
@@ -61,23 +84,23 @@
         </header>
 
         <section class="space-y-4">
-          <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow space-y-5">
-            <header class="space-y-1">
-              <p class="text-sm uppercase tracking-wide text-primary font-semibold">Research Note</p>
-              <h2 class="text-2xl font-semibold text-dark">More Tokens, Less Sense: Why Scaling Training Data Can Waste Energy</h2>
-              <p class="text-sm text-gray-500">Training efficiency collapses long before performance meaningfully improves.</p>
-              <p class="text-xs text-gray-500">Published: January 5, 2026</p>
-            </header>
+          <details open class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+            <summary class="p-6 cursor-pointer hover:bg-gray-50">
+              <header class="space-y-1">
+                <p class="text-sm uppercase tracking-wide text-primary font-semibold">Research Note</p>
+                <h2 class="text-2xl font-semibold text-dark">More Tokens, Less Sense: Why Scaling Training Data Can Waste Energy</h2>
+                <p class="text-sm text-gray-500">Training efficiency collapses long before performance meaningfully improves.</p>
+                <p class="text-xs text-gray-500">Published: January 5, 2026</p>
+              </header>
+            </summary>
+            <div class="px-6 pb-6 space-y-5">
+              <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Energy Efficiency</span>
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Scaling Laws</span>
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Sustainability</span>
+              </div>
 
-            <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
-              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Energy Efficiency</span>
-              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Scaling Laws</span>
-              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Sustainability</span>
-            </div>
-
-            <p class="text-gray-700 leading-relaxed">
-              For years, the dominant intuition in machine learning has been simple: more data makes models better. If performance improves with more training tokens, then scaling up datasets must be the right move. This assumption has driven the explosive growth of large language models and the enormous compute budgets behind them.
-            </p>
+              <p class="text-gray-700 leading-relaxed">
 
             <p class="text-gray-700 leading-relaxed">
               But there is a problem with that intuition.
@@ -154,26 +177,27 @@
             <p class="text-gray-700 leading-relaxed">
               Because the GPU always keeps the receipts.
             </p>
-          </article>
-
-          <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow space-y-5">
-            <header class="space-y-1">
-              <p class="text-sm uppercase tracking-wide text-primary font-semibold">Research Note</p>
-              <h2 class="text-2xl font-semibold text-dark">Innovative Approaches to Enhancing Parameter Efficiency in Large Language Models</h2>
-              <p class="text-sm text-gray-500">Exploring how token counts shape efficiency, cost, and accessibility.</p>
-              <p class="text-xs text-gray-500">Published: January 3, 2026</p>
-            </header>
-
-            <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
-              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Efficiency</span>
-              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">LLMs</span>
-              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Sustainability</span>
             </div>
+          </details>
 
-            <p class="text-gray-700 leading-relaxed">
-              The rapid growth of large language models has transformed AI but introduced immense compute costs and environmental impact. Linear scaling of datasets often yields diminishing returns, pricing out smaller teams and independent researchers.
-            </p>
+          <details class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+            <summary class="p-6 cursor-pointer hover:bg-gray-50">
+              <header class="space-y-1">
+                <p class="text-sm uppercase tracking-wide text-primary font-semibold">Research Note</p>
+                <h2 class="text-2xl font-semibold text-dark">Innovative Approaches to Enhancing Parameter Efficiency in Large Language Models</h2>
+                <p class="text-sm text-gray-500">Exploring how token counts shape efficiency, cost, and accessibility.</p>
+                <p class="text-xs text-gray-500">Published: January 3, 2026</p>
+              </header>
+            </summary>
+            <div class="px-6 pb-6 space-y-5">
+              <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Efficiency</span>
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">LLMs</span>
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Sustainability</span>
+              </div>
 
+              <p class="text-gray-700 leading-relaxed">
+                The rapid growth of large language models has transformed AI but introduced immense compute costs and environmental impact. Linear scaling of datasets often yields diminishing returns, pricing out smaller teams and independent researchers.
             <p class="text-gray-700 leading-relaxed">
               This quantitative study tested whether training token count influences parameter efficiency while holding model size constant. Using scaling laws as a guide, the goal was to find token-to-parameter ratios that lower compute demands and broaden accessibility.
             </p>
@@ -197,25 +221,28 @@
             <p class="text-gray-700 leading-relaxed">
               Future work could probe additional token intervals and energy metrics to refine efficiency strategies. Collaboration across the community can accelerate practical recipes that balance capability, cost, and environmental impact.
             </p>
-          </article>
-
-          <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow space-y-5">
-            <header class="space-y-1">
-              <p class="text-sm uppercase tracking-wide text-primary font-semibold">Perspective</p>
-              <h2 class="text-2xl font-semibold text-dark">Rethinking Metrics in AI: Beyond Efficiency and Statistical Significance</h2>
-              <p class="text-sm text-gray-500">Why looking past accuracy and p-values gives a truer picture of model impact.</p>
-              <p class="text-xs text-gray-500">Published: January 3, 2026</p>
-            </header>
-
-            <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
-              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Evaluation</span>
-              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Metrics</span>
-              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">AI Ethics</span>
             </div>
+          </details>
 
-            <p class="text-gray-700 leading-relaxed">
-              In a fast-paced AI landscape, the yardsticks we use shape what we build. Statistical significance has long been a go-to for judging results, but it can miss practical impact. Accuracy alone can also obscure how models behave in real-world settings.
-            </p>
+          <details class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+            <summary class="p-6 cursor-pointer hover:bg-gray-50">
+              <header class="space-y-1">
+                <p class="text-sm uppercase tracking-wide text-primary font-semibold">Perspective</p>
+                <h2 class="text-2xl font-semibold text-dark">Rethinking Metrics in AI: Beyond Efficiency and Statistical Significance</h2>
+                <p class="text-sm text-gray-500">Why looking past accuracy and p-values gives a truer picture of model impact.</p>
+                <p class="text-xs text-gray-500">Published: January 3, 2026</p>
+              </header>
+            </summary>
+            <div class="px-6 pb-6 space-y-5">
+              <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Evaluation</span>
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Metrics</span>
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">AI Ethics</span>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed">
+                In a fast-paced AI landscape, the yardsticks we use shape what we build. Statistical significance has long been a go-to for judging results, but it can miss practical impact. Accuracy alone can also obscure how models behave in real-world settings.
+              </p>
 
             <h3 class="text-xl font-semibold text-dark">The Limitations of Traditional Metrics</h3>
             <p class="text-gray-700 leading-relaxed">
@@ -247,29 +274,32 @@
             <p class="text-gray-700 leading-relaxed">
               Broadening beyond accuracy and p-values helps align AI with real-world value. Blending energy-aware metrics, task-specific scores, and clear visualizations yields a fuller picture of impact, guiding models that are not just statistically sound but genuinely useful.
             </p>
-          </article>
-
-          <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow space-y-5">
-            <header class="space-y-1">
-              <p class="text-sm uppercase tracking-wide text-primary font-semibold">Findings</p>
-              <h2 class="text-2xl font-semibold text-dark">Understanding the Impact of Training Token Count on Parameter Efficiency in Experiments</h2>
-              <p class="text-sm text-gray-500">How a 150-trial study maps token counts to efficiency, with careful statistical checks.</p>
-              <p class="text-xs text-gray-500">Published: January 3, 2026</p>
-            </header>
-
-            <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
-              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Token Scaling</span>
-              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Efficiency</span>
-              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Statistics</span>
             </div>
+          </details>
 
-            <p class="text-gray-700 leading-relaxed">
-              In fast-paced ML work, understanding how training token counts influence parameter efficiency can materially shift outcomes. This post summarizes findings from 150 trials that varied token counts and applied repeated measures ANOVA to uncover practical guidance.
-            </p>
+          <details class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+            <summary class="p-6 cursor-pointer hover:bg-gray-50">
+              <header class="space-y-1">
+                <p class="text-sm uppercase tracking-wide text-primary font-semibold">Findings</p>
+                <h2 class="text-2xl font-semibold text-dark">Understanding the Impact of Training Token Count on Parameter Efficiency in Experiments</h2>
+                <p class="text-sm text-gray-500">How a 150-trial study maps token counts to efficiency, with careful statistical checks.</p>
+                <p class="text-xs text-gray-500">Published: January 3, 2026</p>
+              </header>
+            </summary>
+            <div class="px-6 pb-6 space-y-5">
+              <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Token Scaling</span>
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Efficiency</span>
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Statistics</span>
+              </div>
 
-            <p class="text-gray-700 leading-relaxed">
-              The study leveraged the script analyze_results.py (Dwyer, 2025) with common Python libraries to process results. Repeated measures ANOVA highlighted whether efficiency differed across token settings—well-suited for within-subject comparisons (Kraska, 2010).
-            </p>
+              <p class="text-gray-700 leading-relaxed">
+                In fast-paced ML work, understanding how training token counts influence parameter efficiency can materially shift outcomes. This post summarizes findings from 150 trials that varied token counts and applied repeated measures ANOVA to uncover practical guidance.
+              </p>
+
+              <p class="text-gray-700 leading-relaxed">
+                The study leveraged the script analyze_results.py (Dwyer, 2025) with common Python libraries to process results. Repeated measures ANOVA highlighted whether efficiency differed across token settings—well-suited for within-subject comparisons (Kraska, 2010).
+              </p>
 
             <h3 class="text-xl font-semibold text-dark">Key Findings</h3>
             <p class="text-gray-700 leading-relaxed">
@@ -289,7 +319,8 @@
             <p class="text-gray-700 leading-relaxed">
               Careful token-count tuning, paired with robust statistics, can improve efficiency without runaway compute. As models and datasets grow, staying alert to diminishing returns will keep training strategies both effective and sustainable.
             </p>
-          </article>
+            </div>
+          </details>
         </section>
 
         <!-- Footer -->
