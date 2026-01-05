@@ -64,6 +64,101 @@
           <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow space-y-5">
             <header class="space-y-1">
               <p class="text-sm uppercase tracking-wide text-primary font-semibold">Research Note</p>
+              <h2 class="text-2xl font-semibold text-dark">More Tokens, Less Sense: Why Scaling Training Data Can Waste Energy</h2>
+              <p class="text-sm text-gray-500">Training efficiency collapses long before performance meaningfully improves.</p>
+              <p class="text-xs text-gray-500">Published: January 5, 2026</p>
+            </header>
+
+            <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
+              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Energy Efficiency</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Scaling Laws</span>
+              <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Sustainability</span>
+            </div>
+
+            <p class="text-gray-700 leading-relaxed">
+              For years, the dominant intuition in machine learning has been simple: more data makes models better. If performance improves with more training tokens, then scaling up datasets must be the right move. This assumption has driven the explosive growth of large language models and the enormous compute budgets behind them.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+              But there is a problem with that intuition.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">The Question</h3>
+            <p class="text-gray-700 leading-relaxed">
+              In a recent follow-up study, I revisited a simple question: what actually happens when you increase training token count while holding everything else constant—same model, same hardware, same optimizer, same number of epochs. And crucially, what happens when you measure energy directly instead of inferring cost indirectly.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+              The answer is uncomfortable. Training efficiency collapses long before performance meaningfully improves.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">Experimental Design</h3>
+            <p class="text-gray-700 leading-relaxed">
+              To isolate the effect of token count, the experiment was intentionally constrained. A fixed 1.1 billion parameter TinyLlama model was trained on identical GPU hardware, an AWS ml.g5.xlarge instance with an NVIDIA A10G GPU. The optimizer, learning rate, precision mode, and number of training epochs were held constant. No schedulers, no fine-tuning tricks, and no adaptive behaviors were introduced.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+              The only variable that changed was training token count. Three conditions were evaluated: 500 thousand tokens, 1 million tokens, and 2 million tokens. Each condition was repeated 50 times, yielding 150 independent training runs. This repetition is important, because many scaling studies rely on single runs or heterogeneous infrastructure, making it difficult to disentangle true effects from noise.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">What Was Measured</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Most scaling studies focus on performance metrics such as loss or perplexity. Those are important, but they tell only half the story. This study measured three things directly: model behavior using inverse perplexity, wall-clock execution time captured through runtime and sampling counts, and actual GPU power consumption recorded in watts using NVIDIA's management library.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+              Power was not estimated or inferred. It was measured every 60 seconds during training and aggregated using a root mean square formulation to reflect sustained energy usage. From these measurements, an energy-aware parameter efficiency metric was computed. The question this metric answers is simple: how much useful model behavior do we get per unit of compute and energy.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">The Results: Efficiency Collapses</h3>
+            <p class="text-gray-700 leading-relaxed">
+              The results were stark. As token count increased, efficiency did not merely decline—it collapsed monotonically. Moving from 500 thousand to 1 million tokens reduced efficiency substantially. Moving from 1 million to 2 million tokens reduced it even further. Every step up in token count produced a statistically distinct outcome.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+              At the same time, model performance barely moved. Inverse perplexity changed modestly across conditions. The model did not get worse, but it did not get meaningfully better either. What did change dramatically was cost.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">Power Consumption: The Physical Reality</h3>
+            <p class="text-gray-700 leading-relaxed">
+              On a hunch, I ran a second analysis that ignored model performance entirely. Instead, I asked a simpler question: does training token count alone affect sustained GPU power consumption.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+              The answer was unambiguous. Power usage increased sharply and monotonically with token count. A separate repeated measures analysis of variance on raw RMS power consumption showed an extremely large effect, even though the hardware, software, and training configuration never changed.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+              This is the key insight. The efficiency decline is not a quirk of a composite metric. It is driven by physical energy demand. Token count directly increases runtime and sustained power draw. Performance gains do not keep up.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">Convergent Evidence</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Two independent analyses, one on energy-aware efficiency and one on raw power consumption, converged on the same conclusion. That convergence matters. It shows that the result is not an artifact of metric construction or statistical modeling. It is a property of the system itself.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">What This Means for Practitioners</h3>
+            <p class="text-gray-700 leading-relaxed">
+              This does not mean scaling is wrong. It means scaling without cost awareness is incomplete. If you are operating at frontier scale with effectively unlimited resources, the trade-off may be acceptable. But for researchers, startups, educators, or anyone outside massive industrial labs, the results are sobering. Doubling training tokens roughly doubles runtime. Energy consumption rises predictably. Efficiency drops even when accuracy does not meaningfully improve.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+              More tokens often buy you less than you think, at a much higher cost than you realize.
+            </p>
+
+            <h3 class="text-xl font-semibold text-dark">The Path Forward</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Scaling laws taught us how performance grows. This study shows how efficiency collapses when energy is treated as a first-class variable. The implication is not to stop scaling. It is to measure it honestly. If we want sustainable and accessible machine learning, we cannot evaluate training strategies using performance metrics alone. We need to ask not just what works, but what it costs to work.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed">
+              Because the GPU always keeps the receipts.
+            </p>
+          </article>
+
+          <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow space-y-5">
+            <header class="space-y-1">
+              <p class="text-sm uppercase tracking-wide text-primary font-semibold">Research Note</p>
               <h2 class="text-2xl font-semibold text-dark">Innovative Approaches to Enhancing Parameter Efficiency in Large Language Models</h2>
               <p class="text-sm text-gray-500">Exploring how token counts shape efficiency, cost, and accessibility.</p>
               <p class="text-xs text-gray-500">Published: January 3, 2026</p>
@@ -200,7 +295,7 @@
         <!-- Footer -->
         <footer class="mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-600">
           <p>© 2026 Joe Dwyer, PhD. All rights reserved.</p>
-          <p class="mt-1">Last updated: January 3, 2026</p>
+          <p class="mt-1">Last updated: January 5, 2026</p>
         </footer>
       </div>
     </main>
