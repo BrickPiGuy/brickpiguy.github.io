@@ -88,6 +88,109 @@
             <summary class="p-6 cursor-pointer hover:bg-gray-50">
               <header class="space-y-1">
                 <p class="text-sm uppercase tracking-wide text-primary font-semibold">Research Note</p>
+                <h2 class="text-2xl font-semibold text-dark">The Neglect of NLP: How Linguistic Grounding Was Lost in LLM Hype</h2>
+                <p class="text-sm text-gray-500">How the focus on scale displaced foundational NLP concepts, and why linguistic grounding remains essential for meaningful understanding.</p>
+                <p class="text-xs text-gray-500">Published: January 11, 2026</p>
+              </header>
+            </summary>
+            <div class="px-6 pb-6 space-y-5">
+              <div class="flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">NLP</span>
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Language Models</span>
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Education</span>
+                <span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200">Linguistics</span>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed">
+                Over the past few years, natural language processing has been declared "solved" more than once. Large language models now write code, pass professional exams, and generate prose that is often indistinguishable from human output. These accomplishments are real and deserve recognition. Yet beneath the impressive demonstrations and benchmark gains lies a growing discomfort. Language models are improving rapidly, while our understanding of language itself is not advancing at the same pace. In the rush toward scale, linguistic grounding, the foundation on which NLP was originally built, has quietly slipped out of focus.
+              </p>
+
+              <h3 class="text-xl font-semibold text-dark">Scale as a Shortcut</h3>
+              <p class="text-gray-700 leading-relaxed">
+                Scale became dominant because it produced visible progress without requiring deeper engagement with the underlying problem of how a language model interprets a prompt. Increasing parameter counts and training data yielded rapid gains on benchmarks and demonstrations, creating the appearance of linguistic competence while sidestepping questions of representation, meaning, and structure. This approach was attractive not only because it worked, but because it worked quickly.
+              </p>
+
+              <p class="text-gray-700 leading-relaxed">
+                In this sense, the neglect of classical NLP has not merely coincided with the rise of prompt engineering. It has actively enabled it. Prompt engineering functions as a compensatory practice, shifting the burden of linguistic precision from the model to the user. When a system lacks grounded language understanding, users are required to carefully shape inputs to coax desired behavior. The sophistication of prompts is often mistaken for model intelligence, masking the absence of deeper linguistic competence. Concerns about this form of progress through scale alone have been raised explicitly in prior work on large language models and their limitations (Bender et al., 2021).
+              </p>
+
+              <h3 class="text-xl font-semibold text-dark">Why the Turn Toward Scale Felt Reasonable</h3>
+              <p class="text-gray-700 leading-relaxed">
+                To be clear, the move toward scale was not irrational. Advances in compute availability, self supervised learning, and transfer learning delivered genuine breakthroughs. Models trained on massive corpora demonstrated behaviors that challenged earlier assumptions about representation and generalization. For a time, it appeared plausible that language understanding might simply emerge as a byproduct of scale.
+              </p>
+
+              <p class="text-gray-700 leading-relaxed">
+                Institutional incentives reinforced this trajectory. Benchmarks, leaderboards, funding mechanisms, and publication norms increasingly rewarded performance gains that correlated strongly with model size. As a result, scale became both the dominant research strategy and the primary signal of progress. Questions that did not immediately translate into benchmark improvements, such as interpretability, grounding, or linguistic structure, were deprioritized.
+              </p>
+
+              <h3 class="text-xl font-semibold text-dark">What Classical NLP Confronted That Modern Models Often Avoid</h3>
+              <p class="text-gray-700 leading-relaxed">
+                Classical NLP forced researchers to make assumptions explicit. Syntax, semantics, and pragmatics were not abstract ideals but operational constraints. Models failed in visible and interpretable ways, inviting analysis rather than celebration. Errors were signals rather than inconveniences.
+              </p>
+
+              <p class="text-gray-700 leading-relaxed">
+                By contrast, contemporary language models often exhibit surface fluency that conceals fragility. They generate plausible text even when internal representations are misaligned with meaning or intent. This distinction between linguistic form and linguistic understanding has been well articulated in prior work, which cautions against conflating fluent output with genuine language comprehension (Bender &amp; Koller, 2020). The result is a system that appears linguistically capable while remaining fundamentally ungrounded.
+              </p>
+
+              <h3 class="text-xl font-semibold text-dark">The Cost of Ungrounded Language Models</h3>
+              <p class="text-gray-700 leading-relaxed">
+                The limitations of this approach become most apparent in extended or high stakes interactions. Hallucinations, inconsistency, and prompt sensitivity are not incidental flaws. They are structural consequences of ungrounded language modeling.
+              </p>
+
+              <p class="text-gray-700 leading-relaxed">
+                A brief technical clarification helps explain why these failures are not anomalous. Large language models generate text by sampling from conditional probability distributions, chaining together sequences of probabilistic decisions. Because each conditional probability is less than one, uncertainty compounds over long generations. As outputs grow longer, small errors accumulate, increasing the likelihood of drift, inconsistency, or outright inaccuracy. Empirical studies of neural text generation have shown that such degeneration is a predictable consequence of probabilistic sequence modeling rather than an implementation flaw (Holtzman et al., 2020).
+              </p>
+
+              <p class="text-gray-700 leading-relaxed">
+                This gap exposes a mismatch between how language models are evaluated and how they are used. Broad benchmarks reward aggregate performance but rarely capture reliability, consistency, or failure transparency within specific operational contexts.
+              </p>
+
+              <h3 class="text-xl font-semibold text-dark">Re-centering NLP Without Rejecting LLMs</h3>
+              <p class="text-gray-700 leading-relaxed">
+                Reintroducing linguistic grounding does not require abandoning large language models. It requires reconsidering how success is defined and measured. Instead of treating all language models as general purpose linguists, evaluation should emphasize practical performance metrics aligned with a system's intended role.
+              </p>
+
+              <p class="text-gray-700 leading-relaxed">
+                Such metrics might prioritize efficiency, reliability, interpretability, constraint adherence, or controlled failure behavior over generalized benchmark dominance. In this framing, linguistic grounding becomes a measurable engineering requirement rather than an abstract philosophical concern. This approach aligns more closely with how complex systems are designed, deployed, and trusted in practice.
+              </p>
+
+              <h3 class="text-xl font-semibold text-dark">Speed and the Erosion of Rhetoric</h3>
+              <p class="text-gray-700 leading-relaxed">
+                The speed and fluency of large language models introduce a more subtle consequence, one that extends beyond technical performance into the domain of rhetoric itself. When responses are generated instantly and at scale, the precision of linguistic form becomes increasingly important. A poorly structured interrogative, an imprecise modifier, or an unintended presupposition can subtly alter meaning or imply intentions that were never present. In slower, more deliberative modes of communication, such rhetorical missteps are often noticed and corrected. In high speed language generation, they propagate unchecked.
+              </p>
+
+              <p class="text-gray-700 leading-relaxed">
+                This marks a critical juncture not only for NLP research, but for how language is used, interpreted, and trusted. When linguistic form is treated as a surface detail rather than a foundational structure, both human and machine communication become more vulnerable to misinterpretation. The result is not merely technical inaccuracy, but rhetorical drift, where meaning shifts not through argument or intent, but through speed.
+              </p>
+
+              <h3 class="text-xl font-semibold text-dark">What We Trade for Speed</h3>
+              <p class="text-gray-700 leading-relaxed">
+                The trajectory of modern NLP invites a broader question that extends beyond artificial intelligence alone. In prioritizing speed, scale, and instant gratification, it is worth asking what is being traded away in the process. Reaching a destination faster is not inherently progress if it comes at the cost of accuracy, understanding, or reliability.
+              </p>
+
+              <p class="text-gray-700 leading-relaxed">
+                Real learning, whether in humans or machines, emerges through constraint, error, and sustained engagement with complexity. When struggle is engineered out in favor of immediate fluency, the result may appear impressive in the short term, but it risks hollowing out the foundations that make learning meaningful. If this trade off remains unexamined, the consequences will extend beyond technical systems and into how society values understanding itself.
+              </p>
+
+              <h3 class="text-xl font-semibold text-dark">References</h3>
+              <p class="text-gray-700 leading-relaxed text-sm">
+                Bender, E. M., Gebru, T., McMillan-Major, A., &amp; Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? <em>Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</em>, 610–623. https://doi.org/10.1145/3442188.3445922
+              </p>
+
+              <p class="text-gray-700 leading-relaxed text-sm">
+                Bender, E. M., &amp; Koller, A. (2020). Climbing towards NLU: On meaning, form, and understanding in the age of data. <em>Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</em>, 5185–5198. https://doi.org/10.18653/v1/2020.acl-main.463
+              </p>
+
+              <p class="text-gray-700 leading-relaxed text-sm">
+                Holtzman, A., Buys, J., Du, L., Forbes, M., &amp; Choi, Y. (2020). The curious case of neural text degeneration. <em>International Conference on Learning Representations</em>.
+              </p>
+            </div>
+          </details>
+
+          <details class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+            <summary class="p-6 cursor-pointer hover:bg-gray-50">
+              <header class="space-y-1">
+                <p class="text-sm uppercase tracking-wide text-primary font-semibold">Research Note</p>
                 <h2 class="text-2xl font-semibold text-dark">Why "Large Language Model" Is a Misnomer</h2>
                 <p class="text-sm text-gray-500">How naming shapes thinking, and why better terminology matters for understanding and using these systems.</p>
                 <p class="text-xs text-gray-500">Published: January 10, 2026</p>
@@ -452,7 +555,7 @@
         <!-- Footer -->
         <footer class="mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-600">
           <p>© 2026 Joe Dwyer, PhD. All rights reserved.</p>
-          <p class="mt-1">Last updated: January 10, 2026</p>
+          <p class="mt-1">Last updated: January 11, 2026</p>
         </footer>
       </div>
     </main>
