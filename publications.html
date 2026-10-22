@@ -65,101 +65,93 @@
         </header>
 
         <section class="space-y-4">
-          <div class="bg-white p-6 rounded-2xl shadow-md">
+          <article class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
             <h2 class="text-xl font-semibold text-dark">Scaling Down the Scaling Laws: Parameter Efficiency and Compute-Optimal Training in Resource-Constrained Large Language Models</h2>
-            <p class="mt-2 text-gray-600">Joe Dwyer · 2026 · Review article</p>
-            <p class="mt-3 text-gray-700">A review of LLM scaling research focused on parameter and data efficiency, compute-optimal training, and whether scaling principles generalize to resource-constrained environments.</p>
-            <a href="https://arxiv.org/abs/2610.06387" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-primary hover:underline font-semibold">Read on arXiv</a>
-          </div>
-
-          <div class="bg-white p-6 rounded-2xl shadow-md">
-            <h2 class="text-xl font-semibold text-dark">Understanding how full-time workers use AI: Patterns of use, trust, and perceived value</h2>
-            <p class="mt-2 text-gray-600">Prior, Y., Dwyer, J., Martelli, M., &amp; Bush, M. · Poster presentation, American Psychological Association Annual Convention, August 2026.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-2xl shadow-md">
-            <h2 class="text-xl font-semibold text-dark">A Quantitative Experimental Repeated Measures Study of Training Dynamics in a Small Llama Style Language Model Under a Compute-Aware Token Budget</h2>
-            <p class="mt-2 text-gray-600">2026. arXiv preprint.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow">
-            <div class="flex items-start space-x-3">
-              <span class="text-2xl">📘</span>
-              <div>
-                <h2 class="text-xl font-semibold text-dark">Revisiting Training Scale: An Empirical Study of Token Count, Power Consumption, and Parameter Efficiency</h2>
-                <p class="text-gray-600">2026. Dissertation follow-up study.</p>
-                <a href="https://arxiv.org/abs/2601.06649" target="_blank" rel="noopener noreferrer" class="inline-block text-primary hover:underline font-semibold">Read on arXiv</a>
-                <details class="mt-3 text-sm text-gray-700 bg-slate-50 rounded-lg border border-slate-200">
-                  <summary class="px-3 py-2 font-semibold text-primary cursor-pointer">Abstract</summary>
-                  <div class="px-3 pb-3 pt-1 space-y-2">
-                    <p>
-                      Research in machine learning has questioned whether increases in training token counts reliably produce proportional performance gains in large language models. Building on prior work introducing an energy-aware parameter efficiency metric, this study empirically examines the effects of increasing training token counts under fixed hardware and training conditions. The significance of this work lies in the explicit integration of power consumption and execution duration, as reflected by the power sampling frequency, into token-scale analysis. This addresses a gap in prior studies emphasizing performance outcomes while underrepresenting computational and energy costs. Using a repeated-measures experimental design on a constant GPU instance with an identical model architecture, optimizer settings, and epoch counts, a 1.1-billion-parameter TinyLlama model was trained at three token counts (500K, 1M, and 2M). While conventional performance metrics exhibited inconsistent or diminishing returns across token scales, the inclusion of power consumption and execution duration revealed a strictly monotonic decline in training efficiency as token count increased. Repeated-measures ANOVA demonstrated a strong effect of token count on parameter efficiency (F(2, 98) = 24,268.23, p &lt; .001, ηg² = .997), with all pairwise comparisons remaining significant following the Bonferroni correction. These findings indicate that increases in training token counts may be energetically inefficient even when marginal performance improvements are observed, underscoring the importance of efficiency-aware evaluation in large language model training.
-                    </p>
-                  </div>
-                </details>
-              </div>
+            <p class="mt-2 text-sm text-gray-600">Joe Dwyer · Review article · 2026</p>
+            <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+              <a href="https://arxiv.org/abs/2610.06387" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary hover:underline">Read on arXiv</a>
+              <details class="text-gray-700">
+                <summary class="cursor-pointer font-semibold text-primary">Abstract</summary>
+                <p class="mt-2 max-w-3xl leading-relaxed">Large language models (LLMs) have achieved substantial performance gains through increases in model size, training data, and computational resources. However, traditional scaling approaches produce diminishing returns, rising financial and environmental costs, and barriers to participation for researchers operating outside large industrial laboratories. This review examines the evolution of LLM scaling theory from empirical scaling laws to compute-optimal training, with particular emphasis on parameter efficiency, token utilization, data efficiency, and resource-constrained environments. Foundational work on scaling laws is synthesized alongside later research on compute-optimal training, data pruning, efficient architectures, quantization, low-rank adaptation, and edge-oriented optimization. The literature indicates a shift from scale maximization toward more deliberate allocation of parameters, tokens, compute, and hardware resources. At the same time, important empirical, theoretical, and methodological gaps remain regarding whether scaling principles established on enterprise-grade infrastructure generalize to smaller models and constrained computing environments. This review organizes these developments into a unified framework for resource-efficient LLM training and argues that future progress should evaluate efficiency not solely through model performance, but through the relationship among performance, parameter count, computational cost, token allocation, and hardware constraints.</p>
+              </details>
             </div>
-          </div>
+          </article>
 
-          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow">
-            <div class="flex items-start space-x-4">
+          <article class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+            <h2 class="text-xl font-semibold text-dark">Understanding how full-time workers use AI: Patterns of use, trust, and perceived value</h2>
+            <p class="mt-2 text-sm text-gray-600">Prior, Y., Dwyer, J., Martelli, M., &amp; Bush, M. · Poster · APA Annual Convention · August 2026</p>
+          </article>
+
+          <article class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+            <h2 class="text-xl font-semibold text-dark">A Quantitative Experimental Repeated Measures Study of Training Dynamics in a Small Llama Style Language Model Under a Compute-Aware Token Budget</h2>
+            <p class="mt-2 text-sm text-gray-600">Joe Dwyer · arXiv preprint · 2026</p>
+          </article>
+
+          <article class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+            <div>
+                <h2 class="text-xl font-semibold text-dark">Revisiting Training Scale: An Empirical Study of Token Count, Power Consumption, and Parameter Efficiency</h2>
+                <p class="mt-2 text-sm text-gray-600">Joe Dwyer · arXiv preprint · 2026</p>
+            </div>
+            <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+              <a href="https://arxiv.org/abs/2601.06649" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary hover:underline">Read on arXiv</a>
+              <details class="text-gray-700">
+                <summary class="cursor-pointer font-semibold text-primary">Abstract</summary>
+                <p class="mt-2 max-w-3xl leading-relaxed">Research in machine learning has questioned whether increases in training token counts reliably produce proportional performance gains in large language models. Building on prior work introducing an energy-aware parameter efficiency metric, this study empirically examines the effects of increasing training token counts under fixed hardware and training conditions. The significance of this work lies in the explicit integration of power consumption and execution duration, as reflected by the power sampling frequency, into token-scale analysis. This addresses a gap in prior studies emphasizing performance outcomes while underrepresenting computational and energy costs. Using a repeated-measures experimental design on a constant GPU instance with an identical model architecture, optimizer settings, and epoch counts, a 1.1-billion-parameter TinyLlama model was trained at three token counts (500K, 1M, and 2M). While conventional performance metrics exhibited inconsistent or diminishing returns across token scales, the inclusion of power consumption and execution duration revealed a strictly monotonic decline in training efficiency as token count increased. Repeated-measures ANOVA demonstrated a strong effect of token count on parameter efficiency (F(2, 98) = 24,268.23, p &lt; .001, ηg² = .997), with all pairwise comparisons remaining significant following the Bonferroni correction. These findings indicate that increases in training token counts may be energetically inefficient even when marginal performance improvements are observed, underscoring the importance of efficiency-aware evaluation in large language model training.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+            <div class="flex items-start gap-5">
               <img 
                 src="prior-et-al-how-we-eat-2026-7.png" 
                 alt="This is How We Eat book cover" 
-                class="w-24 h-32 object-cover rounded shadow-sm"
+                class="h-28 w-20 rounded object-cover"
               />
-              <div>
+              <div class="min-w-0">
                 <h2 class="text-xl font-semibold text-dark">This is How We Eat</h2>
-                <p class="text-gray-600">Published 2026. Edited by Yvette Prior.</p>
-                <a href="https://www.amazon.com/This-How-We-Eat-Connection/dp/B0GR19DTXV/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold">View on Amazon</a>
+                <p class="mt-2 text-sm text-gray-600">Edited by Yvette Prior · 2026</p>
+                <a href="https://www.amazon.com/This-How-We-Eat-Connection/dp/B0GR19DTXV/" target="_blank" rel="noopener noreferrer" class="mt-3 inline-block text-sm font-semibold text-primary hover:underline">View on Amazon</a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow">
-            <div class="flex items-start space-x-4">
+          <article class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+            <div class="flex items-start gap-5">
               <img 
                 src="cover-how-we-work-2025-2.png" 
                 alt="This is How We Work book cover" 
-                class="w-24 h-32 object-cover rounded shadow-sm"
+                class="h-28 w-20 rounded object-cover"
               />
-              <div>
+              <div class="min-w-0">
                 <h2 class="text-xl font-semibold text-dark">This is How We Work</h2>
-                <p class="text-gray-600">Published 2025. Edited by Yvette Prior.</p>
-                <a href="https://a.co/d/59sr34F" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold">View on Amazon</a>
+                <p class="mt-2 text-sm text-gray-600">Edited by Yvette Prior · 2025</p>
+                <a href="https://a.co/d/59sr34F" target="_blank" rel="noopener noreferrer" class="mt-3 inline-block text-sm font-semibold text-primary hover:underline">View on Amazon</a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow">
-            <div class="flex items-start space-x-3">
-              <span class="text-2xl">📘</span>
-              <div class="w-full">
+          <article class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+            <div>
                 <h2 class="text-xl font-semibold text-dark">A Quantitative Experimental Study on Exploring Parameter Efficiency with Varying Token Counts in OpenLLaMA Training</h2>
-                <p class="text-gray-600">Doctoral dissertation, 2025. Published in ProQuest.</p>
-                <details class="mt-3 text-sm text-gray-700 bg-slate-50 rounded-lg border border-slate-200">
-                  <summary class="px-3 py-2 font-semibold text-primary cursor-pointer">Abstract</summary>
-                  <div class="px-3 pb-3 pt-1 space-y-2">
-                    <p>
-                      This study examines how varying training token counts affects parameter efficiency in OpenLLaMA training. It uses a quantitative experimental approach grounded in scaling laws and evaluates training efficiency under controlled conditions.
-                    </p>
-                  </div>
-                </details>
-                <a href="https://www.proquest.com/openview/0f3f131eb64374057181f266eddb1dee/1?pq-origsite=gscholar&cbl=18750&diss=y" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-primary hover:underline font-semibold">Publication link</a>
-              </div>
+                <p class="mt-2 text-sm text-gray-600">Joe Dwyer · Doctoral dissertation · 2025</p>
             </div>
-          </div>
+            <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+              <a href="https://www.proquest.com/openview/0f3f131eb64374057181f266eddb1dee/1?pq-origsite=gscholar&cbl=18750&diss=y" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary hover:underline">Read on ProQuest</a>
+              <details class="text-gray-700">
+                <summary class="cursor-pointer font-semibold text-primary">Research summary</summary>
+                <p class="mt-2 max-w-3xl leading-relaxed">This study examines how varying training token counts affects parameter efficiency in OpenLLaMA training. It uses a quantitative experimental approach grounded in scaling laws and evaluates training efficiency under controlled conditions.</p>
+              </details>
+            </div>
+          </article>
 
-          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow">
-            <div class="flex items-start space-x-3">
-              <span class="text-2xl">📘</span>
-              <div>
+          <article class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+            <div>
                 <h2 class="text-xl font-semibold text-dark">Technology and stress: A qualitative case study with Gen Z workers</h2>
-                <p class="text-gray-600">Published 2023. Over 800 reads on ResearchGate.</p>
-                <a href="http://dx.doi.org/10.13140/RG.2.2.35912.29447" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold">Read online</a>
-              </div>
+                <p class="mt-2 text-sm text-gray-600">Prior, Y., West, J., &amp; Dwyer, J. · Poster · APA Annual Convention · 2023</p>
             </div>
-          </div>
+            <a href="https://doi.org/10.13140/RG.2.2.35912.29447" target="_blank" rel="noopener noreferrer" class="mt-3 inline-block text-sm font-semibold text-primary hover:underline">Read online</a>
+          </article>
         </section>
 
         <!-- Footer -->
