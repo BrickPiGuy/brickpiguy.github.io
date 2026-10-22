@@ -3,24 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Research with Grit – Joe Dwyer, PhD</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Joe Dwyer, PhD - Research with Grit. Open, rigorous LLM research focused on parameter efficiency and accessible AI. Science as ego renunciation." />
-    <meta name="keywords" content="AI research, large language models, LLM, parameter efficiency, open science, Joe Dwyer, machine learning" />
+    <title>Joe Dwyer | Computer Science and Language Model Research</title>
+    <meta name="description" content="Joe Dwyer is a computer scientist and Associate Dean of Software Development at ECPI University. His research examines language model training and parameter efficiency." />
     <meta name="author" content="Joe Dwyer, PhD" />
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://brickpiguy.github.io/" />
-    <meta property="og:title" content="Research with Grit – Joe Dwyer, PhD" />
-    <meta property="og:description" content="Science as ego renunciation. Open, rigorous, and meaningful AI research." />
+    <meta property="og:title" content="Joe Dwyer | Computer Science and Language Model Research" />
+    <meta property="og:description" content="Computer scientist studying language model training and parameter efficiency." />
     <meta property="og:image" content="https://brickpiguy.github.io/joseph_dwyer_circular_clean.png" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Research with Grit – Joe Dwyer, PhD" />
-    <meta name="twitter:description" content="Science as ego renunciation. Open, rigorous, and meaningful AI research." />
+    <meta name="twitter:title" content="Joe Dwyer | Computer Science and Language Model Research" />
+    <meta name="twitter:description" content="Computer scientist studying language model training and parameter efficiency." />
     <meta name="twitter:image" content="https://brickpiguy.github.io/joseph_dwyer_circular_clean.png" />
     
     <!-- Favicon -->
@@ -28,155 +25,86 @@
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png" />
 
-    <!-- ✅ Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+              sans: ['Public Sans', 'ui-sans-serif', 'system-ui'],
+              serif: ['Newsreader', 'Georgia', 'serif'],
             },
             colors: {
-              primary: '#2563eb', // blue-600
-              dark: '#1e293b', // slate-800
+              ink: '#20251f',
+              paper: '#f5f4ee',
+              moss: '#47624c',
+              rust: '#a45135',
             },
           },
         },
       };
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
 
-  <body class="bg-gradient-to-b from-slate-100 to-white text-gray-900 font-sans">
-    <main class="min-h-screen px-4 py-12 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto space-y-10">
-        <!-- Header -->
-        <header class="text-center">
-          <h1 class="text-5xl font-extrabold text-primary hover:scale-105 transition-transform">
-            Research with Grit
-          </h1>
-          <p class="mt-2 text-xl text-gray-600">
-            Science as ego renunciation. Open, rigorous, and meaningful.
-          </p>
-        </header>
+  <body class="bg-paper font-sans text-ink antialiased">
+    <header class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 lg:px-10">
+      <a href="index.html" class="font-semibold tracking-wide">JOE DWYER <span class="text-rust">/</span> CS</a>
+      <nav aria-label="Main navigation" class="flex gap-5 text-sm font-medium sm:gap-8">
+        <a class="hover:text-rust" href="publications.html">Research</a>
+        <a class="hover:text-rust" href="blog.html">Notes</a>
+        <a class="hover:text-rust" href="Joseph_Dwyer_CV.pdf">CV</a>
+      </nav>
+    </header>
 
-        <!-- About -->
-        <section class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
-          <img
-            src="joseph_dwyer_circular_clean.png"
-            alt="Joseph Dwyer"
-            class="mx-auto mb-4 w-32 h-32 rounded-full shadow-md object-cover"
-          />
-          <h2 class="text-2xl font-bold text-dark">About Me</h2>
-          <p class="mt-2">
-            Hi, my name is Joe Dwyer. I’m a PhD graduate in Computer
-            Science researching Large Language Models, with a focus on training
-            and parameter optimization. I believe in process over prestige, and
-            I aim to show that simple, meaningful research can change minds.
-          </p>
-        </section>
-
-        <!-- Core Principles -->
-        <section class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow">
-          <h2 class="text-2xl font-bold text-dark">Core Principles</h2>
-          <ul class="list-disc list-inside space-y-1 mt-2">
-            <li>Transparency and open access</li>
-            <li>Iterative, reproducible science</li>
-            <li>Welcoming feedback and post-publication dialogue</li>
-            <li>Valuing null results as contributions</li>
-            <li>Accessibility for anyone curious about research</li>
-          </ul>
-        </section>
-
-        <!--My Research Values -->
-        <section class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow">
-          <h2 class="text-2xl font-bold text-slate-800">My Research Values</h2>
-            <h3 class="mt-4 text-xl font-semibold text-gray-700">✳️ I stand for:</h3>
-              <ul class="list-disc list-inside space-y-2 mt-2">
-                <li>Transparency in method, data, and intention.</li>
-                <li>Accessibility of knowledge — no paywalls, no gatekeeping.</li>
-                <li>Integrity in how I handle failure, success, and critique.</li>
-                <li>Iteration over ego — science is a process, not a product.</li>
-                <li>Rigor with heart — I pursue excellence not for status, but to honor the work.</li>
-                <li>Education through example — I show my students that meaningful research is possible, regardless of pedigree or privilege.</li>
-              </ul>
-
-            <h3 class="mt-6 text-xl font-semibold text-gray-700">🚫 I reject:</h3>
-              <ul class="list-disc list-inside space-y-2 mt-2">
-                <li>The obsession with prestige journals and inflated metrics.</li>
-                <li>The academic sprint that leaves deeper questions behind.</li>
-                <li>The belief that research must be flashy, complicated, or exclusive to matter.</li>
-                <li>The idea that your age, funding, or institution defines your capacity to contribute.</li>
-              </ul>
-        </section>
-
-        <!-- Explore -->
-        <section class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow">
-          <h2 class="text-2xl font-bold text-dark">Explore</h2>
-          <p class="mt-2 text-gray-600">Browse my publications or read blog posts on research, rigor, and practice.</p>
-          <div class="mt-4 flex flex-col items-center space-y-3 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0">
-            <a
-              href="publications.html"
-              class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-primary text-white font-semibold hover:bg-blue-700 transition"
-            >
-              📚 View Publications
-            </a>
-            <a
-              href="blog.html"
-              class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-gray-800 text-white font-semibold hover:bg-black transition"
-            >
-              📝 Read Blog
-            </a>
+    <main class="mx-auto max-w-6xl px-6 pb-16 lg:px-10">
+      <section class="grid items-center gap-10 border-y border-ink/15 py-12 md:grid-cols-[1.2fr_0.8fr] md:gap-16 md:py-20">
+        <div>
+          <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-moss">Computer science · Research · Education</p>
+          <h1 class="font-serif text-6xl leading-none sm:text-7xl">Joe Dwyer</h1>
+          <p class="mt-6 max-w-2xl text-xl leading-relaxed text-ink/80">I study how training choices affect the efficiency of language models, and how computer science education can keep pace with a changing field.</p>
+          <p class="mt-5 text-sm font-medium text-ink/65">PhD in Computer Science · Associate Dean of Software Development, ECPI University</p>
+          <div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
+            <a class="text-rust underline decoration-rust/40 underline-offset-4 hover:decoration-rust" href="publications.html">Browse research</a>
+            <a class="underline decoration-ink/30 underline-offset-4 hover:decoration-ink" href="Joseph_Dwyer_CV.pdf">View CV</a>
+            <a class="underline decoration-ink/30 underline-offset-4 hover:decoration-ink" href="mailto:Joseph.Jerome.Dwyer@gmail.com">Email me</a>
           </div>
-        </section>
+        </div>
+        <img src="joseph_dwyer_circular_clean.png" alt="Joseph Dwyer" class="mx-auto aspect-square w-56 rounded-full object-cover md:w-72" />
+      </section>
 
-        <!-- Contact -->
-        <section class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow">
-          <h2 class="text-2xl font-bold text-dark">Connect</h2>
-          <div class="flex flex-col items-center space-y-3 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 mt-2">
-            <a
-                href="Joseph_Dwyer_CV.pdf"
-                target="_blank"
-                class="inline-block px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition"
-            >
-                📄 Download CV
-            </a>
+      <section class="grid gap-8 border-b border-ink/15 py-10 md:grid-cols-[0.65fr_1.35fr] md:py-14">
+        <h2 class="font-serif text-3xl">Research focus</h2>
+        <div class="max-w-3xl space-y-4 text-base leading-relaxed text-ink/80">
+          <p>My doctoral research examined how changing the number of training tokens affects parameter efficiency. I use controlled experiments and compute-aware measures to ask not only how a model performs, but what the training run costs.</p>
+          <p>That work now informs my interest in practical, resource-conscious machine learning and in making software development education relevant to the tools students will encounter.</p>
+        </div>
+      </section>
 
-            <a
-              href="mailto:jdwyer@ecpi.edu"
-              class="inline-block px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
-              >📧 Email</a
-            >
-            <a
-              href="https://orcid.org/0009-0005-5262-1583"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-block px-4 py-2 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition"
-              >🔬 ORCID</a
-            >
-            <a
-              href="https://www.linkedin.com/in/joe-dwyer-phd"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-block px-4 py-2 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800 transition"
-              >💼 LinkedIn</a
-            >
-            <a
-              href="https://github.com/brickpiguy"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-block px-4 py-2 rounded-lg bg-gray-800 text-white font-semibold hover:bg-black transition"
-              >🐙 GitHub</a
-            >
-          </div>
-        </section>
+      <section class="grid gap-8 border-b border-ink/15 py-10 md:grid-cols-[0.65fr_1.35fr] md:py-14">
+        <h2 class="font-serif text-3xl">Current work</h2>
+        <div class="max-w-3xl">
+          <p class="text-lg font-semibold">Associate Dean of Software Development</p>
+          <p class="mt-1 text-sm text-ink/65">ECPI University · August 2026–present</p>
+          <p class="mt-4 leading-relaxed text-ink/80">I lead software development programs, including the design and implementation of a bachelor’s degree in AI-augmented software development. I previously served as the university’s Computer Information Science Program Director.</p>
+        </div>
+      </section>
 
-        <!-- Footer -->
-        <footer class="mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-600">
-          <p>© 2026 Joe Dwyer, PhD. All rights reserved.</p>
-          <p class="mt-1">Last updated: January 13, 2026</p>
-        </footer>
-      </div>
+      <section class="grid gap-8 py-10 md:grid-cols-[0.65fr_1.35fr] md:py-14">
+        <h2 class="font-serif text-3xl">Elsewhere</h2>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
+          <a class="underline decoration-ink/30 underline-offset-4 hover:text-rust" href="https://orcid.org/0009-0005-5262-1583" target="_blank" rel="noopener noreferrer">ORCID</a>
+          <a class="underline decoration-ink/30 underline-offset-4 hover:text-rust" href="https://www.linkedin.com/in/joe-dwyer-phd" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="underline decoration-ink/30 underline-offset-4 hover:text-rust" href="https://github.com/brickpiguy" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="underline decoration-ink/30 underline-offset-4 hover:text-rust" href="blog.html">Research notes</a>
+        </div>
+      </section>
+
+      <footer class="border-t border-ink/15 pt-5 text-sm text-ink/60">
+        <p>Joe Dwyer · Computer Science · ECPI University</p>
+      </footer>
     </main>
   </body>
 </html>

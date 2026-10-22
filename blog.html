@@ -3,23 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog – Research with Grit</title>
+    <title>Research Notes | Joe Dwyer</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Thoughts on research, rigor, and practice. Blog by Joe Dwyer, PhD exploring AI efficiency, metrics, and open science." />
+    <meta name="description" content="Research notes by Joe Dwyer on language models, experimental methods, and how we measure progress in AI." />
     <meta name="keywords" content="AI blog, machine learning research, LLM efficiency, research metrics, academic blog, Joe Dwyer" />
     <meta name="author" content="Joe Dwyer, PhD" />
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://brickpiguy.github.io/blog.html" />
-    <meta property="og:title" content="Blog – Research with Grit" />
-    <meta property="og:description" content="Thoughts on research, rigor, and practice in AI and machine learning." />
+    <meta property="og:title" content="Research Notes | Joe Dwyer" />
+    <meta property="og:description" content="Writing on language models, experimental methods, and how we measure progress in AI." />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Blog – Research with Grit" />
-    <meta name="twitter:description" content="Thoughts on research, rigor, and practice in AI and machine learning." />
+    <meta name="twitter:title" content="Research Notes | Joe Dwyer" />
+    <meta name="twitter:description" content="Writing on language models, experimental methods, and how we measure progress in AI." />
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -32,23 +32,27 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+              sans: ['Public Sans', 'ui-sans-serif', 'system-ui'],
+              serif: ['Newsreader', 'Georgia', 'serif'],
             },
             colors: {
-              primary: '#2563eb',
-              dark: '#1e293b',
+              primary: '#a45135',
+              dark: '#20251f',
             },
           },
         },
       };
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
       details summary {
         cursor: pointer;
         user-select: none;
       }
       details summary::-webkit-details-marker {
-        color: #2563eb;
+        color: #a45135;
         margin-right: 0.75rem;
       }
       details > summary {
@@ -56,7 +60,7 @@
       }
       details > summary::before {
         content: '▶ ';
-        color: #2563eb;
+        color: #a45135;
         display: inline-block;
         margin-right: 0.5rem;
         transition: transform 0.2s ease;
@@ -66,18 +70,18 @@
       }
     </style>
   </head>
-  <body class="bg-gradient-to-b from-slate-100 to-white text-gray-900 font-sans">
+  <body class="bg-[#f5f4ee] text-gray-900 font-sans">
     <main class="min-h-screen px-4 py-12 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto space-y-8">
         <header class="flex items-center justify-between">
           <div>
-            <p class="text-sm uppercase tracking-wide text-primary font-semibold">Research with Grit</p>
-            <h1 class="text-4xl font-extrabold text-dark">Blog</h1>
-            <p class="mt-2 text-gray-600">Thoughts on research, rigor, and practice.</p>
+            <p class="text-sm uppercase tracking-wide text-primary font-semibold">Joe Dwyer / Notes</p>
+            <h1 class="text-4xl font-extrabold text-dark">Research Notes</h1>
+            <p class="mt-2 text-gray-600">Writing on language models, experimental methods, and how we measure progress in AI.</p>
           </div>
           <a
             href="index.html"
-            class="inline-flex items-center px-4 py-2 rounded-lg bg-gray-800 text-white font-semibold hover:bg-black transition"
+            class="font-semibold text-dark underline decoration-gray-400 underline-offset-4 hover:text-primary"
           >
             ← Home
           </a>
@@ -555,7 +559,6 @@
         <!-- Footer -->
         <footer class="mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-600">
           <p>© 2026 Joe Dwyer, PhD. All rights reserved.</p>
-          <p class="mt-1">Last updated: January 13, 2026</p>
         </footer>
       </div>
     </main>
